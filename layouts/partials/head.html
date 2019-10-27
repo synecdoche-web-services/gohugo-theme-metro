@@ -1,0 +1,3 @@
+{{- $themeStyle := resources.Get "styles/theme.sass" | resources.ExecuteAsTemplate "themeTemplate.sass" . | toCSS | postCSS | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" integrity="{{ $themeStyle.Data.Integrity }}" />
+<title>{{ .Page.Title }}</title>
