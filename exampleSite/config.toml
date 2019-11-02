@@ -3,3 +3,9 @@ languageCode = "en-us"
 title = "Metro Theme for Hugo"
 theme = "gohugo-theme-metro"
 themesDir = "../.."
+
+[menu]
+[[menu.social]]
+identifier = "facebook"
+name = "Find us on Facebook"
+url = "https://facebook.com/My-Business"

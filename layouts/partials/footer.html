@@ -1,0 +1,12 @@
+<footer>
+	{{- with .Site.Menus.social -}}
+		<h1>Social Media</h1>
+		<ul class="social-links">
+			{{- range . -}}
+				<li>
+					<a href="{{ .URL }}" class="social-links__{{ .Identifier }} fab fa-{{ .Identifier }}" title="{{ .Name }}"></a>
+				</li>
+			{{- end -}}
+		</ul>
+	{{- end -}}
+</footer>
