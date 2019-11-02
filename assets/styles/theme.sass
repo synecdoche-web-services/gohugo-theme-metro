@@ -1,11 +1,10 @@
-{{ if .Site.Params.darktheme }}
-$fg: #eee
-$bg: #333
-{{ else }}
-$fg: #333
-$bg: #eee
-{{ end }}
+$fg: #080a10
+$bg: lavender
+$link-color: #1720db
+$theme-color: {{ or .Site.Params.themecolor "lightsteelblue" }}
+$cta-color: {{ or .Site.Params.ctacolor "steelblue" }}
 
-$link-color: #137df7
+@import 'mixins', 'reset'
 
-@import 'reset'
+@import 'sections/header', 'sections/footer'
+@import 'blocks/button', 'blocks/social-links.sass'
