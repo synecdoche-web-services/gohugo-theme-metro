@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		{{- partial "head.html" . -}}
+		{{- partial "meta.html" -}}
+
+		{{- $themeStyle := resources.Get "styles/theme.sass" | resources.ExecuteAsTemplate "themeTemplate.sass" . | toCSS | postCSS | minify | fingerprint -}}
+		<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" integrity="{{ $themeStyle.Data.Integrity }}" />
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+
+		<title>{{ .Page.Title }}</title>
 	</head>
 	<body>
 		{{- partial "header.html" . -}}
