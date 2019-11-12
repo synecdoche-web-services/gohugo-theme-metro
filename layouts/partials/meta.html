@@ -1,1 +1,15 @@
+{{- with .Title -}}
+	<meta name="og:title" content="{{.}}" />
+	<meta name="og:site_name" content="{{ $.Site.Title }}" />
+{{- else -}}
+	<meta name="og:title" content="{{ .Site.Title }}" />
+{{- end -}}
+{{- with .Description -}}
+	<meta name="description" content="{{.}}" />
+{{- end -}}
+{{- with .Keywords -}}
+	<meta name="keywords" content="{{ delimit . "," }}" />
+{{- end -}}
 
+<meta name="og:url" content="{{.Permalink}}" />
+<link rel="canonical" href="{{.Permalink}}" />
