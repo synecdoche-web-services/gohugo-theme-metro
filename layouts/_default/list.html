@@ -1,6 +1,14 @@
 {{ define "main" -}}
-	{{- .Content -}}
-	{{- range .Pages -}}
-		<a title="{{ .Title }}" href="{{ .Permalink }}">{{- .Title -}}</a>
-	{{- end -}}
+	<article class="page-content">
+			{{- .Content -}}
+		<section>
+			{{- with .Pages -}}
+				<nav>
+					{{- range . -}}
+						<a title="{{ .Title }}" href="{{ .Permalink }}">{{- .Title -}}</a>
+					{{- end -}}
+				</nav>
+			{{- end -}}
+		</section>
+	</article>
 {{- end }}
