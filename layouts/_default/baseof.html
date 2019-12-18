@@ -11,7 +11,10 @@
 	</head>
 	<body>
 		{{- partial "header.html" . -}}
-		<main>
+		<main class="main">
+			{{- with .Params.heroimg -}}
+				{{ partial "hero-image.html" $ }}
+			{{- end -}}
 			{{- block "main" . }}{{- end }}
 		</main>
 		{{- partial "footer.html" . -}}
