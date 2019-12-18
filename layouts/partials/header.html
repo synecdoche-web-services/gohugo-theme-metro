@@ -1,0 +1,17 @@
+<header class="header{{ if not .Params.heroimg }} header--background-steel{{ end }}">
+	<div class="header__content">
+	<a class="header__site-title header__link" href="{{ .Site.BaseURL }}">
+		{{- with .Site.Params.icon -}}
+			<img src="{{ $.Site.BaseURL }}{{.}}" class="header__site-title__icon" />
+		{{- end -}}
+		{{- .Site.Title -}}
+	</a>
+	{{- with .Site.Menus.pages -}}
+		<nav>
+			{{- range . -}}
+				<a class="header__link" href="{{.URL}}">{{.Name}}</a>
+			{{- end -}}
+		</nav>
+	{{- end -}}
+	</div>
+</header>

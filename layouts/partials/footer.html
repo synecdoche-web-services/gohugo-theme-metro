@@ -1,6 +1,13 @@
-<footer>
+<footer class="footer">
+	<div class="footer__content">
+	{{- with .Site.Menus.pages -}}
+		<nav>
+			{{- range . -}}
+				<a class="header__link" href="{{.URL}}">{{.Name}}</a>
+			{{- end -}}
+		</nav>
+	{{- end -}}
 	{{- with .Site.Menus.social -}}
-		<h1>Social Media</h1>
 		<ul class="social-links">
 			{{- range . -}}
 				<li>
@@ -9,4 +16,5 @@
 			{{- end -}}
 		</ul>
 	{{- end -}}
+	</div>
 </footer>
