@@ -3,7 +3,7 @@
 	<head>
 		{{- partial "meta.html" . -}}
 
-		{{- $themeStyle := resources.Get "styles/theme.sass" | resources.ExecuteAsTemplate "themeTemplate.sass" . | toCSS | postCSS | minify | fingerprint -}}
+		{{- $themeStyle := resources.Get "css/theme.css" | fingerprint -}}
 		<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" integrity="{{ $themeStyle.Data.Integrity }}" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
 
