@@ -4,8 +4,13 @@ title = "Metro Theme for Hugo"
 theme = "gohugo-theme-metro"
 themesDir = "../.."
 
+disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[params]
+icon = "icon.svg"
+
 [menu]
 [[menu.social]]
-identifier = "facebook"
-name = "Find us on Facebook"
-url = "https://facebook.com/My-Business"
+identifier = "github"
+name = "Code on Github"
+url = "https://github.com/Synecdoche-Web-Services/gohugo-theme-metro"
