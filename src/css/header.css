@@ -24,6 +24,7 @@
 
 .header .header__site-icon {
 	width: 1em;
+	margin-right: .4em;
 }
 
 .header .header__link {
