@@ -6,6 +6,7 @@ themesDir = "../.."
 
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
+copyright = "&copy; 2020 Synecdoche Web Services LLC"
 [params]
 icon = "icon.svg"
 
