@@ -1,20 +1,32 @@
 <footer class="footer">
 	<div class="footer__content">
-	{{- with .Site.Menus.pages -}}
-		<nav>
-			{{- range . -}}
-				<a class="header__link" href="{{.URL}}">{{.Name}}</a>
+		{{- with .Site.Menus.social -}}
+			<nav class="footer__section footer__section--fullwidth footer__section--social-media">
+				{{- range . -}}
+					<a href="{{ .URL }}" class="footer__link fab fa-{{ .Identifier }}" title="{{ .Name }}"></a>
+				{{- end -}}
+			</nav>
+		{{- end -}}
+		{{- with $.Site.Home -}}
+			<nav class="footer__section">
+				<h1 class="footer__section__title"><a href="{{.URL}}">{{$.Site.Title}}</a></h1>
+				{{- range where .Pages "Kind" "page" -}}
+					<a href="{{.URL}}">{{.Title}}</a>
+				{{- end -}}
+			</nav>
+			{{- range where .Pages "Kind" "section" -}}
+				<nav class="footer__section">
+					<h1 class="footer__section__title"><a href="{{.URL}}">{{.Title}}</a></h1>
+					{{- range .Pages -}}
+						<a href="{{.URL}}">{{.Title}}</a>
+					{{- end -}}
+				</nav>
 			{{- end -}}
-		</nav>
-	{{- end -}}
-	{{- with .Site.Menus.social -}}
-		<ul class="social-links">
-			{{- range . -}}
-				<li>
-					<a href="{{ .URL }}" class="social-links__{{ .Identifier }} fab fa-{{ .Identifier }}" title="{{ .Name }}"></a>
-				</li>
-			{{- end -}}
-		</ul>
-	{{- end -}}
+		{{- end -}}
+		{{- with .Site.Copyright -}}
+			<div class="footer__section footer__section--fullwidth">
+				<p>{{ safeHTML . }}</p>
+			</div>
+		{{- end -}}
 	</div>
 </footer>
