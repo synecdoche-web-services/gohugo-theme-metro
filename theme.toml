@@ -9,6 +9,7 @@ homepage = "https://github.com/synecdoche-web-services/gohugo-theme-metro#readme
 tags = [ "incomplete" ]
 features = []
 min_version = "0.41"
+DefaultContentLanguage = "en"
 
 [author]
   name = "Evan Rusmisel"
