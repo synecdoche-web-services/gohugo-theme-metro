@@ -1,12 +1,12 @@
 baseURL = "https://example.org/"
 languageCode = "en-us"
 title = "Metro Theme for Hugo"
+copyright = "&copy; 2020 Synecdoche Web Services LLC"
 theme = "gohugo-theme-metro"
 themesDir = "../.."
 
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
-copyright = "&copy; 2020 Synecdoche Web Services LLC"
 [params]
 icon = "icon.svg"
 
