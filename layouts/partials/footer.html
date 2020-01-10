@@ -20,7 +20,9 @@
 					{{- range first ( or $.Site.Params.footerlistlimit 4 ) .Pages -}}
 						<a href="{{.Permalink}}">{{.Title}}</a>
 					{{- end -}}
-					<a href="{{.Permalink}}">{{ T "more" }}</h1>
+					{{- if gt ( len .Pages ) ( or $.Site.Params.footerlistlimit 4 ) -}}
+						<a href="{{.Permalink}}">{{ T "more" }}</a>
+					{{- end -}}
 				</nav>
 			{{- end -}}
 		{{- end -}}
