@@ -1,8 +1,8 @@
-@import 'colors.css';
-@import 'fonts.css';
+@import 'vars/colors.css';
+@import 'vars/fonts.css';
 
-@import 'reset.css';
-@import 'header.css';
-@import 'hero-image.css';
-@import 'content.css';
-@import 'footer.css';
+@import 'partials/reset.css';
+@import 'partials/header.css';
+@import 'partials/hero-image.css';
+@import 'partials/content.css';
+@import 'partials/footer.css';
