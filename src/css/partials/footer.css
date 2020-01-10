@@ -10,8 +10,9 @@
 	margin: auto;
 
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
 	grid-gap: .6em;
+	grid-template-columns: [row-start] repeat(auto-fill, minmax(15em, 1fr)) [row-end];
+	grid-auto-flow: row dense;
 }
 
 .footer .footer__section {
@@ -25,7 +26,7 @@
 }
 
 .footer .footer__section--fullwidth {
-	grid-column: 1/4;
+	grid-column: row-start / row-end;
 }
 
 .footer .footer__section--social-media {
