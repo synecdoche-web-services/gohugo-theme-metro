@@ -14,7 +14,7 @@
 		{{- partial "header.html" . -}}
 		<main class="main">
 			{{- with .Params.heroimg -}}
-				{{ partial "hero-image.html" $ }}
+				{{ partial "hero-image.html" . }}
 			{{- end -}}
 			{{- block "main" . }}{{- end }}
 		</main>

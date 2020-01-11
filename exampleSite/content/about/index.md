@@ -6,6 +6,7 @@ draft: false
 menu: pages
 heroimg:
     src: "hero.jpg"
+    fixed: true
 ---
 
 # About Us
