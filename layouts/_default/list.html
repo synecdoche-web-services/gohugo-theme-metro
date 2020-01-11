@@ -3,17 +3,12 @@
 			{{- .Content -}}
 		<section>
 			{{- with .Pages -}}
-				<nav><ul class="section-list">
+				<nav>
 					{{- range . -}}
-						<li><a title="{{ .Title }}" href="{{ .Permalink }}">{{- .Title -}}</a></li>
+						<h2><a title="{{ .Title }}" href="{{ .Permalink }}">{{- .Title -}}</a></h2>
 					{{- end -}}
-				</ul></nav>
+				</nav>
 			{{- end -}}
 		</section>
 	</article>
-{{- end -}}
-
-{{- define "head" -}}
-{{- $ss := resources.Get "css/list.css" | fingerprint -}}
-<link rel="stylesheet" href="{{ $ss.Permalink }}" integrity="{{ $ss.Data.Integrity }}" />
 {{- end -}}
