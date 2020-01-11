@@ -5,4 +5,10 @@
 
 	--fonts-header-family: sans-serif;
 	--fonts-header-line-height: 1.2;
+	--fonts-header-size-1: 2.30em;
+	--fonts-header-size-2: 2.00em;
+	--fonts-header-size-3: 1.75em;
+	--fonts-header-size-4: 1.45em;
+	--fonts-header-size-5: 1.30em;
+	--fonts-header-size-6: 1.20em;
 }
