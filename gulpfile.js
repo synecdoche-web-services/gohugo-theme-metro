@@ -19,7 +19,7 @@ function js() {
 }
 
 function clean() {
-	return del(['public', 'resources']);
+	return del(['public', 'resources', 'assets/*']);
 }
 
 const build = parallel(css, js);
