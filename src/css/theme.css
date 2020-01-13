@@ -1,6 +1,8 @@
 @import 'vars/colors.css';
 @import 'vars/fonts.css';
 
+@import 'shortcodes/cta.css';
+
 @import 'partials/reset.css';
 @import 'partials/header.css';
 @import 'partials/hero-image.css';

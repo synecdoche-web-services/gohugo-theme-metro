@@ -27,3 +27,6 @@ Corrupti molestiae quia suscipit praesentium ipsa et. Corporis sequi et molestia
 Enim earum at necessitatibus aperiam vitae. Molestiae quia sunt aperiam consequatur facere rerum. Et cumque blanditiis et autem ea quia iusto. Qui incidunt qui ipsam ipsam id. Id qui ipsam voluptate adipisci ratione et voluptatem illo. Repellendus et ipsam eos earum et eum magni quis.
 
 Ad molestiae in in. Sed in est porro rem esse adipisci ipsam sit. Enim et aliquam veritatis omnis.
+
+# Page CTA:
+{{< cta relref="about/index.md" shadow=true sheen=true >}}CLICK ME!{{</ cta >}}

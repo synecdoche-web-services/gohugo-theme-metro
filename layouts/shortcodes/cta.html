@@ -1,0 +1,5 @@
+{{ $location := or (ref . (.Get "ref")) (relref . (.Get "relref")) (.Get "href") "#" }}
+
+<a class="cta{{ if .Get "sheen" }} cta--sheen{{ end }}{{ if .Get "shadow" }} cta--shadow{{ end }}" href="{{ $location }}">
+	{{ .Inner }}
+</a>
