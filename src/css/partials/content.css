@@ -5,3 +5,7 @@
 	margin: auto;
 	padding: 6vmin 1em;
 }
+
+.page-content img {
+	max-width: 100%;
+}
