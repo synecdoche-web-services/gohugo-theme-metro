@@ -1,11 +1,17 @@
 baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "Metro Theme for Hugo"
+languageCode = "en"
 copyright = "&copy; 2020 Synecdoche Web Services LLC"
 theme = "gohugo-theme-metro"
 themesDir = "../.."
 
 disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
+
+[languages.en]
+title = "Metro Theme for Hugo"
+contentDir = "content/en"
+[languages.ja]
+title = "Metro Theme for Hugo (japanese)"
+contentDir = "content/ja"
 
 [params]
 icon = "icon.svg"
