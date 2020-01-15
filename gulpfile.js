@@ -6,8 +6,7 @@ const	{ src, dest, watch, task, series, parallel } = require('gulp'),
 	postcssEnv = require('postcss-preset-env'),
 	cssnano = require('cssnano'),
 	babel = require('gulp-babel'),
-	del = require('del'),
-	browserSync = require('browser-sync').create();
+	del = require('del');
 
 function css() {
 	return src('src/**/*.css')
@@ -45,4 +44,4 @@ const watcher = () => {
 
 task('build', series(clean, build));
 task('clean', clean);
-task('default', series(build, watcher));
+task('default', series(buildAssets, watcher));
