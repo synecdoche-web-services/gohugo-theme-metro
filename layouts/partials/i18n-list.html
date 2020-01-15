@@ -1,0 +1,7 @@
+{{- if .IsTranslated -}}
+<nav class="alternate-lang">
+	{{- range .Translations -}}
+		<a class="alternate-lang__link alternate-lang__link--{{.Lang}}" rel="alternate" href="{{.Permalink}}" hreflang="{{.Lang}}">{{.Title}}</a>
+	{{- end -}}
+</nav>
+{{- end -}}
