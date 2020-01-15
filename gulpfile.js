@@ -21,11 +21,14 @@ function js() {
 		.pipe(dest('assets'));
 }
 
-function hugo(cb) {
-	execFile(hugoBin, ['-b', '/'], { cwd: 'exampleSite' }, (e, o) => {
-		console.log(o);
-		cb(e)
-	});
+function runHugo(...hugoArgs) {
+	return new Promise((resolve, reject) => {
+		const proc = execFile(hugoBin, hugoArgs, { cwd: 'exampleSite' }, (err, stdout, stderr) => {
+			if(err) return reject(stderr);
+			resolve(stdout)
+		});
+		proc.stdout.pipe(process.stdout)
+	})
 }
 
 function clean() {
@@ -33,16 +36,11 @@ function clean() {
 }
 
 const	buildAssets = parallel(css, js),
-	build = series(buildAssets, hugo);
+	buildHugo = () => runHugo()
+	build = series(buildAssets, buildHugo);
 const watcher = () => {
-	browserSync.init({
-		watch: true,
-		server: 'exampleSite/public',
-		notify: false,
-		ghostMode: false
-	});
+	runHugo('server', '--disableFastRender').then(console.log).catch(console.error)
 	watch([ 'src' ], buildAssets)
-	watch([ 'archetypes', 'assets', 'i18n', 'layouts', 'theme.toml', 'exampleSite/content', 'exampleSite/static', 'exampleSite/config.toml' ], hugo)
 };
 
 task('build', series(clean, build));
