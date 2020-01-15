@@ -1,2 +1,7 @@
 [more]
 other = "Read More"
+
+[404_title]
+other = "404&mdash;Lost Page"
+[404_text]
+other = "We couldn't find that page; it may have been moved or deleted."
