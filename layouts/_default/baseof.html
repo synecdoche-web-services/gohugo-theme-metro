@@ -16,8 +16,10 @@
 			{{- with .Params.heroimg -}}
 				{{ partial "hero-image.html" . }}
 			{{- end -}}
-			{{- partial "i18n-list.html" . -}}
-			{{- block "main" . }}{{- end }}
+			<article class="page-content">
+				{{- partial "alternate-languages.html" . -}}
+				{{- block "main" . }}{{- end }}
+			</article>
 		</main>
 		{{- partial "footer.html" . -}}
 	</body>
