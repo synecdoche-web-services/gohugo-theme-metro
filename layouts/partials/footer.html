@@ -1,9 +1,16 @@
 <footer class="footer">
 	<div class="footer__content">
 		{{- with .Site.Menus.social -}}
-			<nav class="footer__section footer__section--fullwidth footer__section--social-media">
+			<nav class="footer__section footer__section--fullwidth footer__section--spaced-row footer__section--social-media">
 				{{- range . -}}
 					<a href="{{ .URL }}" class="footer__link fab fa-{{ .Identifier }}" title="{{ .Name }}"></a>
+				{{- end -}}
+			</nav>
+		{{- end -}}
+		{{- if .IsTranslated -}}
+			<nav class="footer__section footer__section--fullwidth footer__section--spaced-row footer__section--languages">
+				{{- range .Translations -}}
+					<a rel="alternate" href="{{.Permalink}}" hreflang="{{.Lang}}">{{.Language.LanguageName}}</a>
 				{{- end -}}
 			</nav>
 		{{- end -}}

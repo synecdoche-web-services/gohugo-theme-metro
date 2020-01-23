@@ -29,18 +29,17 @@
 	grid-column: row-start / row-end;
 }
 
+.footer .footer__section--spaced-row {
+	flex-direction: row;
+	justify-content: space-around;
+}
+
 .footer .footer__section--social-media {
 	text-align: center;
 	font-size: 1.4rem;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
 }
 
 .footer .footer__section--social-media a {
 	text-decoration: none;
 	color: inherit;
-}
-
-.footer .footer__link {
 }

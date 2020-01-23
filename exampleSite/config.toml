@@ -8,9 +8,11 @@ disableKinds = ["RSS", "taxonomy", "taxonomyTerm"]
 
 [languages.en]
 title = "Metro Theme for Hugo"
+languageName = "English"
 contentDir = "content/en"
 [languages.ja]
 title = "Metro Theme for Hugo (japanese)"
+languageName = "にほんご"
 contentDir = "content/ja"
 
 [params]
