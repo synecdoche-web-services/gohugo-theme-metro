@@ -16,14 +16,14 @@
 		{{- end -}}
 		{{- with $.Site.Home -}}
 			<nav class="footer__section">
-				<h1 class="footer__section__title"><a href="{{.Permalink}}">{{$.Site.Title}}</a></h1>
+				<h2 class="footer__section__title"><a href="{{.Permalink}}">{{$.Site.Title}}</a></h2>
 				{{- range where .Pages "Kind" "page" -}}
 					<a href="{{.Permalink}}">{{.Title}}</a>
 				{{- end -}}
 			</nav>
 			{{- range where .Pages "Kind" "section" -}}
 				<nav class="footer__section">
-					<h1 class="footer__section__title"><a href="{{.Permalink}}">{{.Title}}</a></h1>
+					<h2 class="footer__section__title"><a href="{{.Permalink}}">{{.Title}}</a></h2>
 					{{- range first ( or $.Site.Params.footerlistlimit 4 ) .Pages -}}
 						<a href="{{.Permalink}}">{{.Title}}</a>
 					{{- end -}}
