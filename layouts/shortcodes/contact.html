@@ -1,0 +1,9 @@
+<form class="contact-form" method="{{ or (.Get "method") "POST" }}"{{ with .Get "action" }} action="{{.}}"{{end}}>
+	<label class="contact-form__label" for="name">{{ or (.Get "name-prompt") "Name" }}</label>
+	<input class="contact-form__input" id="name" type="text" name="name" />
+	<label class="contact-form__label" for="email">{{ or (.Get "email-prompt") "Email" }}</label>
+	<input class="contact-form__input" id="email" type="email" name="email" />
+	<label class="contact-form__label" for="message">{{ or (.Get "message-prompt") "Message" }}</label>
+	<textarea class="contact-form__input" id="message" name="message"></textarea>
+	<input class="contact-form__submit" type="submit" value="{{ or (.Get "submit-prompt") "Send" }}" />
+</form>
