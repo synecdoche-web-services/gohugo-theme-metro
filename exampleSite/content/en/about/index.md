@@ -10,3 +10,6 @@ heroimg:
 ---
 
 # About Us
+
+
+{{<contact method="POST" action="/submit" >}}

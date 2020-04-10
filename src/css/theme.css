@@ -2,6 +2,7 @@
 @import 'vars/fonts.css';
 
 @import 'shortcodes/cta.css';
+@import 'shortcodes/contact.css';
 
 @import 'partials/reset.css';
 @import 'partials/header.css';
