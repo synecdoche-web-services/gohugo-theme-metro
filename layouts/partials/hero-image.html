@@ -1,4 +1,4 @@
-<div class="hero-img" style="background-image: url('{{ .src }}');{{if .fixed}}background-attachment: fixed;{{end}}">
+<div class="hero-img" style="background-image: url('{{ .src }}');{{ with .gravity }}background-position: {{.}};{{ end }}{{ if .fixed }}background-attachment: fixed;{{ end }}">
 	{{- with .title -}}
 		<div class="hero-img__content">
 			<h1>{{ safeHTML . }}</h1>
