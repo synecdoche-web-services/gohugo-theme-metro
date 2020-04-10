@@ -15,6 +15,7 @@
 
 .header > .header__site-title {
 	color: var(--color-dark-text);
+	font-family: var(--fonts-header-family);
 	font-weight: bold;
 	text-decoration: none;
 	white-space: nowrap;
