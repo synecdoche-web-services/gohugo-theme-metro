@@ -1,8 +1,13 @@
+:root {
+	font-size: var(--fonts-body-size);
+	font-family: var(--fonts-body-family);
+	line-height: var(--fonts-body-line-height);
+	background-color: var(--color-background);
+}
+
 body {
 	margin: 0;
 	padding: 0;
-	font: var(--fonts-body-size)/var(--fonts-body-line-height) var(--fonts-body-family);
-	background-color: var(--color-background);
 }
 
 h1, h2, h3, h4, h5, h6 {

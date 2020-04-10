@@ -10,10 +10,12 @@
 	justify-content: space-between;
 	padding: 0 1em;
 	font-size: 1.2em;
+	background-color: var(--color-dark-background);
 }
 
 .header > .header__site-title {
-	color: var(--color-text);
+	color: var(--color-dark-text);
+	font-weight: bold;
 	text-decoration: none;
 	white-space: nowrap;
 }
