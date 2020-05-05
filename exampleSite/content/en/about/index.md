@@ -12,4 +12,4 @@ heroimg:
 # About Us
 
 
-{{<contact method="POST" action="/submit" >}}
+{{<contact method="POST" action="/submit" netlify=true >}}
