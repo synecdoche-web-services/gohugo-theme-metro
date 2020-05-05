@@ -19,8 +19,8 @@
   },
   "homepage": "https://github.com/synecdoche-web-services/gohugo-theme-metro#readme",
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "gulp": "^4.0.2",

@@ -4,6 +4,7 @@
 		{{- partial "meta.html" . -}}
 
 		{{- $themeStyle := resources.Get "css/theme.css" | fingerprint -}}
+		<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Lora:wght@500&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" integrity="{{ $themeStyle.Data.Integrity }}" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
 

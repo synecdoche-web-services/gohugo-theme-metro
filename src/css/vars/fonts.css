@@ -1,9 +1,9 @@
 :root {
-	--fonts-body-family: sans-serif;
+	--fonts-body-family: 'Lora', serif;
 	--fonts-body-size: 18px;
 	--fonts-body-line-height: 1.6;
 
-	--fonts-header-family: sans-serif;
+	--fonts-header-family: 'Josefin Sans', sans-serif;
 	--fonts-header-line-height: 1.2;
 	--fonts-header-size-1: 2.30em;
 	--fonts-header-size-2: 2.00em;
